@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Mauri870\\LinkedIn\\": "src/"
+            "Mauri870\\LinkedIn\\": "src/Mauri870/LinkedIn/"
         }
     }
 }
