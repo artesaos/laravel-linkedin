@@ -21,7 +21,13 @@ class LinkedinServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->publishes([
+            __DIR__ . '/config/linkedin.php' => config_path('linkedin.php'),
+        ]);
+
+        $this->mergeConfigFrom(
+            __DIR__ . '/config/linkedin.php','linkedin'
+        );
     }
 
     /**
