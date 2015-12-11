@@ -1,0 +1,27 @@
+{
+    "name": "mauri870/laravel-linkedin",
+    "type": "library",
+    "description": "Linkedin API integration for Laravel Framework",
+    "keywords": ["LinkedIn","Laravel Framework","API","Client","SDK"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mauri de Souza Nunes",
+            "email": "mauri870@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/contracts": "~5.1",
+        "illuminate/http": "~5.1",
+        "illuminate/support": "~5.1",
+        "illuminate/database": "~5.1",
+        "happyr/linkedin-api-client": "0.6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mauri870\\LinkedIn\\": "src/"
+        }
+    }
+}
