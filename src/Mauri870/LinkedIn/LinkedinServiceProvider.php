@@ -7,7 +7,7 @@
  * @license   https://opensource.org/licenses/MIT MIT License
  */
 
-namespace Mauri870\Linkedin;
+namespace Mauri870\LinkedIn;
 
 
 use Illuminate\Support\ServiceProvider;
