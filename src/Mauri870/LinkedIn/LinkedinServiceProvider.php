@@ -9,7 +9,6 @@
 
 namespace Mauri870\LinkedIn;
 
-
 use Illuminate\Support\ServiceProvider;
 
 class LinkedinServiceProvider extends ServiceProvider
@@ -21,6 +20,7 @@ class LinkedinServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        //Publish config files
         $this->publishes([
             __DIR__ . '/config/linkedin.php' => config_path('linkedin.php'),
         ]);
@@ -37,6 +37,12 @@ class LinkedinServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        //Bind the facade and pass api construct parameters
+        $this->app->bind('LinkedIn', function(){
+            $api_key = config('linkedin.api_key');
+            $api_secret = config('linkedin.api_secret');
+
+            return new LinkedInLaravel($api_key, $api_secret);
+        });
     }
 }

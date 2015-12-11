@@ -24,6 +24,4 @@ class LinkedInLaravel extends LinkedIn
     {
         parent::__construct($app_id, $app_secret);
     }
-
-
 }
