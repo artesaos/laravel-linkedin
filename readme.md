@@ -29,6 +29,18 @@ In order to use this API client (or any other LinkedIn clients) you have to [reg
 with LinkedIn to receive an API key. Once you've registered your LinkedIn app, you will be provided with
 an *API Key* and *Secret Key*, please fill this values on `linkedin.php` config file.
 
+####Basic Usage
+The unique difference in this package is the `LinkedIn` facade. Instead of this:
+```php
+$linkedIn=new Happyr\LinkedIn\LinkedIn('app_id', 'app_secret');
+$linkedin->foo();
+```
+you can simple call the facade for anyone method, like this:
+```php
+LinkedIn::foo();
+```
+The service provider automatically return an instance of `LinkedIn` class ready to use
+
 #### LinkedIn login
 
 This example below is showing how to login with LinkedIn using `LinkedIn` facade.
