@@ -39,7 +39,7 @@ you can simple call the facade for anyone method, like this:
 ```php
 LinkedIn::foo();
 ```
-The service provider automatically return an instance of `LinkedIn` class ready to use
+The service container automatically return an instance of `LinkedIn` class ready to use
 
 #### LinkedIn login
 
