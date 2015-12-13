@@ -20,7 +20,7 @@ Mauri870\LinkedIn\LinkedinServiceProvider::class,
 
 #### Publish config file
 ```
-php artisan vendor:publish --provider="Mauri870\LinkedIn\LinkedinServiceProvider::class" --tag="config"
+php artisan vendor:publish --provider="Mauri870\LinkedIn\LinkedinServiceProvider" --tag="config"
 ```
 
 ### Usage
@@ -45,4 +45,5 @@ if (LinkedIn::isAuthenticated()) {
         //if not authenticated
         $url = LinkedIn::getLoginUrl();
         return "<a href='$url'>Login with LinkedIn</a>";
+}
 ```
