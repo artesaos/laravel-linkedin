@@ -2,7 +2,7 @@
     "name": "mauri870/laravel-linkedin",
     "type": "library",
     "description": "Linkedin API integration for Laravel Framework",
-    "keywords": ["LinkedIn","Laravel Framework","API","Client","SDK"],
+    "keywords": ["LinkedIn","Laravel Framework","API","Client","SDK","Integration","REST"],
     "license": "MIT",
     "authors": [
         {
