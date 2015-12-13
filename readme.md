@@ -60,7 +60,7 @@ $options = ['json'=>
         'comment' => 'Im testing Happyr LinkedIn client with Laravel Framework! https://github.com/mauri870/laravel-linkedin',
         'visibility' => [
                'code' => 'anyone'
-           ]
+        ]
      ]
 ];
 
