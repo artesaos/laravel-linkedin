@@ -47,3 +47,24 @@ if (LinkedIn::isAuthenticated()) {
         return "<a href='$url'>Login with LinkedIn</a>";
 }
 ```
+
+#### How to post on LinkedIn wall
+
+The example below shows how you can post on a users wall. The access token is fetched from the database. 
+
+```php
+LinkedIn::setAccessToken('access_token_from_db');
+
+$options = ['json'=>
+     [
+        'comment' => 'Im testing Happyr LinkedIn client with Laravel Framework! https://github.com/mauri870/laravel-linkedin',
+        'visibility' => [
+               'code' => 'anyone'
+           ]
+     ]
+];
+
+$result = LinkedIn::post('v1/people/~/shares', $options);
+
+dd($result);
+```
