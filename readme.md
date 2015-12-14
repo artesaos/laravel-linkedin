@@ -47,17 +47,16 @@ This example below is showing how to login with LinkedIn using `LinkedIn` facade
 
 ```php 
 if (LinkedIn::isAuthenticated()) {
-            //we know that the user is authenticated now. Start query the API
-            $user=LinkedIn::get('v1/people/~:(firstName,lastName)');
-            return "Welcome ".$user['firstName'];
-        } elseif (LinkedIn::hasError()) {
-            return  "User canceled the login.";
-        }
-
-        //if not authenticated
-        $url = LinkedIn::getLoginUrl();
-        return "<a href='$url'>Login with LinkedIn</a>";
+     //we know that the user is authenticated now. Start query the API
+     $user=LinkedIn::get('v1/people/~:(firstName,lastName)');
+     return "Welcome ".$user['firstName'];
+}elseif (LinkedIn::hasError()) {
+     return  "User canceled the login.";
 }
+
+//if not authenticated
+$url = LinkedIn::getLoginUrl();
+return "<a href='$url'>Login with LinkedIn</a>";
 ```
 
 #### How to post on LinkedIn wall
