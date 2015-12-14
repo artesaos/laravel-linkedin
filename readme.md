@@ -1,3 +1,4 @@
+[![Latest Stable Version](https://poser.pugx.org/mauri870/laravel-linkedin/v/stable)](https://packagist.org/packages/mauri870/laravel-linkedin) [![Total Downloads](https://poser.pugx.org/mauri870/laravel-linkedin/downloads)](https://packagist.org/packages/mauri870/laravel-linkedin) [![Latest Unstable Version](https://poser.pugx.org/mauri870/laravel-linkedin/v/unstable)](https://packagist.org/packages/mauri870/laravel-linkedin) [![License](https://poser.pugx.org/mauri870/laravel-linkedin/license)](https://packagist.org/packages/mauri870/laravel-linkedin)
 ## Linkedin API integration for Laravel Framework
 
 This package is a wrapper for [Happyr/LinkedIn-API-client](https://github.com/Happyr/LinkedIn-API-client).
