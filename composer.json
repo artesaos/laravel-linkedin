@@ -19,6 +19,9 @@
         "illuminate/database": "~5.1",
         "happyr/linkedin-api-client": "0.6.*"
     },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
     "autoload": {
         "psr-4": {
             "Mauri870\\LinkedIn\\": "src/Mauri870/LinkedIn/"
