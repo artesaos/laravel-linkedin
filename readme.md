@@ -20,7 +20,7 @@ Mauri870\LinkedIn\LinkedinServiceProvider::class,
 
 #### Publish config file
 ```
-php artisan vendor:publish --provider="Mauri870\LinkedIn\LinkedinServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Mauri870\LinkedIn\LinkedinServiceProvider"
 ```
 
 ### Usage
