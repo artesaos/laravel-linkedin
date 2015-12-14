@@ -20,7 +20,7 @@
         "happyr/linkedin-api-client": "0.6.*"
     },
     "require-dev": {
-	"phpunit/phpunit": "*"
+        "phpunit/phpunit": "*"
     },
     "autoload": {
         "psr-4": {
