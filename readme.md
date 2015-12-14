@@ -41,6 +41,13 @@ LinkedIn::foo();
 ```
 The service container automatically return an instance of `LinkedIn` class ready to use
 
+#### Get basic profile info
+You can retrive information using the `get()` method, like this:
+```php
+LinkedIn::get('v1/people/~:(firstName,num-connections,picture-url)');
+```
+This query return an array of information. You can view all the `REST` api's methods in [REST API Console](https://apigee.com/console/linkedin)
+
 #### LinkedIn login
 
 This example below is showing how to login with LinkedIn using `LinkedIn` facade.
