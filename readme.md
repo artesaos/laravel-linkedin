@@ -7,7 +7,7 @@ You can view the basic intructions [here](https://github.com/Happyr/LinkedIn-API
 
 #### Install with composer
 ```bash
-composer require mauri870/laravel-linkedin:dev-master
+composer require mauri870/laravel-linkedin
 ```
 
 #### Add service Provider
