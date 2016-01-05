@@ -4,8 +4,6 @@
 This package is a wrapper for [Happyr/LinkedIn-API-client](https://github.com/Happyr/LinkedIn-API-client).
 You can view the basic intructions [here](https://github.com/Happyr/LinkedIn-API-client/blob/master/Readme.md). Don't forget to consult the oficial [LinkedIn API](https://developer.linkedin.com/) site.
 
-> For Laravel 5.2 use the [5.2 branch](https://github.com/mauri870/laravel-linkedin/tree/5.2)
-
 
 #### Install with composer
 ```bash
