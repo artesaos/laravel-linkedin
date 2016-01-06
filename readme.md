@@ -4,6 +4,7 @@
 This package is a wrapper for [Happyr/LinkedIn-API-client](https://github.com/Happyr/LinkedIn-API-client).
 You can view the basic intructions [here](https://github.com/Happyr/LinkedIn-API-client/blob/master/Readme.md). Don't forget to consult the oficial [LinkedIn API](https://developer.linkedin.com/) site.
 
+> I encourage users to test the branch [psr-7](https://github.com/mauri870/laravel-linkedin/tree/psr-7) , which is being adopted the psr-7 structure and the independence of an specific http-client. Once the dependencies are stable I will be merge. Please report any bugs or problems.
 
 #### Install with composer
 ```bash
