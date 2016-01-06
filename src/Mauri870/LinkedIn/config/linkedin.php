@@ -9,6 +9,6 @@
  */
 
 return [
-    'api_key' => 'yourapikey',
-    'api_secret' => 'yourapisecret',
+    'api_key' => env('LINKEDIN_KEY','yourapikey'),
+    'api_secret' => env('LINKEDIN_SECRET','yourapisecret'),
 ];
