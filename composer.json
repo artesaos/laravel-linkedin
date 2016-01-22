@@ -10,7 +10,6 @@
             "email": "mauri870@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "php": ">=5.5.9",
         "illuminate/contracts": "~5.1 || ~5.2",
