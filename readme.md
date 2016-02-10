@@ -6,24 +6,46 @@ You can view the basic intructions [here](https://github.com/Happyr/LinkedIn-API
 
 > I encourage users to test the branch [psr-7](https://github.com/mauri870/laravel-linkedin/tree/psr-7) , which is being adopted the psr-7 structure and the independence of an specific http-client. Once the dependencies are stable I will be merge. Please report any bugs or problems.
 
-#### Install with composer
+###### If you need install on Lumen, go to [Lumen section](#installation-on-lumen)
+
+### Installation on Laravel
+
+##### Install with composer
 ```bash
 composer require mauri870/laravel-linkedin
 ```
 
-#### Add service Provider
+##### Add service Provider
 ```
 Mauri870\LinkedIn\LinkedinServiceProvider::class,
 ```
 
-#### Facade
+##### Facade
 ```
 'LinkedIn'  => \Mauri870\LinkedIn\Facades\LinkedIn::class,
 ```
 
-#### Publish config file
+##### Publish config file
 ```
 php artisan vendor:publish --provider="Mauri870\LinkedIn\LinkedinServiceProvider"
+```
+
+### Installation on Lumen
+
+##### Install with composer
+```bash
+composer require mauri870/laravel-linkedin
+```
+
+##### Add Service Provider, facade and config parameters to the `bootstrap/app.php` file
+```php
+$app->register(\Mauri870\LinkedIn\LinkedinServiceProvider::class);
+class_alias(\Mauri870\LinkedIn\Facades\LinkedIn::class,'LinkedIn');
+
+config(['linkedin' => [
+        'api_key' => env('LINKEDIN_KEY','yourapikey'),
+        'api_secret' => env('LINKEDIN_SECRET','yourapisecret')
+]]);
 ```
 
 ### Usage
