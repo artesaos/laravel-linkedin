@@ -21,13 +21,16 @@ class LinkedinServiceProvider extends ServiceProvider
     public function boot()
     {
         //Publish config files
-        $this->publishes([
-            __DIR__ . '/config/linkedin.php' => config_path('linkedin.php'),
-        ]);
+        if(function_exists('config_path')){
+            //If is not a Lumen App...
+            $this->publishes([
+                __DIR__ . '/config/linkedin.php' => config_path('linkedin.php'),
+            ]);
 
-        $this->mergeConfigFrom(
-            __DIR__ . '/config/linkedin.php','linkedin'
-        );
+            $this->mergeConfigFrom(
+                __DIR__ . '/config/linkedin.php','linkedin'
+            );
+        }
     }
 
     /**
