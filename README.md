@@ -207,3 +207,7 @@ $scope = array('rw_groups', 'r_contactinfo', 'r_fullprofile', 'w_messages');
 $url = LinkedIn::getLoginUrl(array('scope'=>$scope));
 return "<a href='$url'>Login with LinkedIn</a>";
 ```
+
+#### Changelog
+
+You can view the latest changes [here](https://github.com/artesaos/laravel-linkedin/blob/master/CHANGELOG.md)
