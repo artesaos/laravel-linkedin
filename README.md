@@ -1,10 +1,10 @@
 ### Linkedin API integration for Laravel Framework
-[![Build Status](https://travis-ci.org/mauri870/laravel-linkedin.svg?branch=master)](https://travis-ci.org/mauri870/laravel-linkedin) [![Coverage Status](https://coveralls.io/repos/mauri870/laravel-linkedin/badge.svg?branch=master&service=github)](https://coveralls.io/github/mauri870/laravel-linkedin?branch=master) [![Latest Stable Version](https://poser.pugx.org/mauri870/laravel-linkedin/v/stable)](https://packagist.org/packages/mauri870/laravel-linkedin) [![Total Downloads](https://poser.pugx.org/mauri870/laravel-linkedin/downloads)](https://packagist.org/packages/mauri870/laravel-linkedin) [![Latest Unstable Version](https://poser.pugx.org/mauri870/laravel-linkedin/v/unstable)](https://packagist.org/packages/mauri870/laravel-linkedin) [![License](https://poser.pugx.org/mauri870/laravel-linkedin/license)](https://packagist.org/packages/mauri870/laravel-linkedin)
+[![Build Status](https://travis-ci.org/artesaos/laravel-linkedin.svg?branch=master)](https://travis-ci.org/artesaos/laravel-linkedin) [![Latest Stable Version](https://poser.pugx.org/artesaos/laravel-linkedin/v/stable)](https://packagist.org/packages/artesaos/laravel-linkedin) [![Total Downloads](https://poser.pugx.org/artesaos/laravel-linkedin/downloads)](https://packagist.org/packages/artesaos/laravel-linkedin) [![Latest Unstable Version](https://poser.pugx.org/artesaos/laravel-linkedin/v/unstable)](https://packagist.org/packages/artesaos/laravel-linkedin) [![License](https://poser.pugx.org/artesaos/laravel-linkedin/license)](https://packagist.org/packages/artesaos/laravel-linkedin)
 
 This package is a wrapper for [Happyr/LinkedIn-API-client](https://github.com/Happyr/LinkedIn-API-client).
-You can view the basic intructions [here](https://github.com/Happyr/LinkedIn-API-client/blob/master/Readme.md). Don't forget to consult the oficial [LinkedIn API](https://developer.linkedin.com/) site.
+You can view the documentation for php version [here](https://github.com/Happyr/LinkedIn-API-client/blob/master/Readme.md). Don't forget to consult the oficial [LinkedIn API](https://developer.linkedin.com/) site.
 
-> I encourage users to test the branch [psr-7](https://github.com/mauri870/laravel-linkedin/tree/psr-7) , which is being adopted the psr-7 structure and the independence of an specific http-client. Once the dependencies are stable I will be merge. Please report any bugs or problems.
+> I encourage users to test the branch [psr-7](https://github.com/artesaos/laravel-linkedin/tree/psr-7) , which is being adopted the psr-7 structure and the independence of an specific http-client. Once the dependencies are stable I will be merge. Please report any bugs or problems.
 
 ###### If you need install on Lumen, go to [Lumen section](#installation-on-lumen)
 
@@ -12,35 +12,35 @@ You can view the basic intructions [here](https://github.com/Happyr/LinkedIn-API
 
 ##### Install with composer
 ```bash
-composer require mauri870/laravel-linkedin
+composer require artesaos/laravel-linkedin
 ```
 
 ##### Add service Provider
 ```
-Mauri870\LinkedIn\LinkedinServiceProvider::class,
+Artesaos\LinkedIn\LinkedinServiceProvider::class,
 ```
 
 ##### Facade
 ```
-'LinkedIn'  => \Mauri870\LinkedIn\Facades\LinkedIn::class,
+'LinkedIn'  => \Artesaos\LinkedIn\Facades\LinkedIn::class,
 ```
 
 ##### Publish config file
 ```
-php artisan vendor:publish --provider="Mauri870\LinkedIn\LinkedinServiceProvider"
+php artisan vendor:publish --provider="Artesaos\LinkedIn\LinkedinServiceProvider"
 ```
 
 ### Installation on Lumen
 
 ##### Install with composer
 ```bash
-composer require mauri870/laravel-linkedin
+composer require artesaos/laravel-linkedin
 ```
 
 ##### Add Service Provider, facade and config parameters to the `bootstrap/app.php` file
 ```php
-$app->register(\Mauri870\LinkedIn\LinkedinServiceProvider::class);
-class_alias(\Mauri870\LinkedIn\Facades\LinkedIn::class,'LinkedIn');
+$app->register(\Artesaos\LinkedIn\LinkedinServiceProvider::class);
+class_alias(\Artesaos\LinkedIn\Facades\LinkedIn::class,'LinkedIn');
 
 config(['linkedin' => [
         'api_key' => env('LINKEDIN_KEY','yourapikey'),
@@ -104,7 +104,7 @@ LinkedIn::setAccessToken('access_token_from_db');
 
 $options = ['json'=>
      [
-        'comment' => 'Im testing Happyr LinkedIn client with Laravel Framework! https://github.com/mauri870/laravel-linkedin',
+        'comment' => 'Im testing Happyr LinkedIn client with Laravel Framework! https://github.com/artesaos/laravel-linkedin',
         'visibility' => [
                'code' => 'anyone'
         ]
@@ -151,7 +151,7 @@ The following code shows you how.
 
 ```php
 $body = array(
-    'comment' => 'Im testing Happyr LinkedIn client! https://github.com/Happyr/LinkedIn-API-client',
+    'comment' => 'Testing the linkedin API!',
     'visibility' => array('code' => 'anyone')
 );
 
