@@ -4,7 +4,6 @@
  * Linkedin API for Laravel Framework
  *
  * @author    Mauri de Souza Nunes <mauri870@gmail.com>
- * @copyright Copyright (c) 2015, Mauri de Souza Nunes <github.com/mauri870>
  * @license   https://opensource.org/licenses/MIT MIT License
  */
 
@@ -16,13 +15,13 @@ class LinkedinClassTest extends PhpUnit
     const APP_SECRET = '987654321';
 
     /**
-     * @var \Mauri870\LinkedIn\LinkedInLaravel
+     * @var \Artesaos\LinkedIn\LinkedInLaravel
      */
     private $linkedin;
 
     public function setUp()
     {
-        $this->linkedin = new \Mauri870\LinkedIn\LinkedInLaravel(self::APP_ID, self::APP_SECRET);
+        $this->linkedin = new \Artesaos\LinkedIn\LinkedInLaravel(self::APP_ID, self::APP_SECRET);
     }
 
     /**

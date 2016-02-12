@@ -7,7 +7,7 @@
  * @license   https://opensource.org/licenses/MIT MIT License
  */
 
-namespace Mauri870\LinkedIn\Facades;
+namespace Artesaos\LinkedIn\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
