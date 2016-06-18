@@ -35,15 +35,12 @@ php artisan vendor:publish --provider="Artesaos\LinkedIn\LinkedinServiceProvider
 composer require artesaos/laravel-linkedin
 ```
 
-##### Add Service Provider, facade and config parameters to the `bootstrap/app.php` file
+##### Add Service Provider, facade and config parameters to the `bootstrap/app.php` file and copy the [linkedin.php](https://github.com/artesaos/laravel-linkedin/blob/master/src/Artesaos/LinkedIn/config/linkedin.php) to the config directory of your project (create then if not exists)
 ```php
 $app->register(\Artesaos\LinkedIn\LinkedinServiceProvider::class);
 class_alias(\Artesaos\LinkedIn\Facades\LinkedIn::class,'LinkedIn');
 
-config(['linkedin' => [
-        'api_key' => env('LINKEDIN_KEY','yourapikey'),
-        'api_secret' => env('LINKEDIN_SECRET','yourapisecret')
-]]);
+$app->configure('linkedin');
 ```
 
 ### Usage
