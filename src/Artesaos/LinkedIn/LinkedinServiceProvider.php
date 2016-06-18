@@ -9,6 +9,8 @@
 namespace Artesaos\LinkedIn;
 
 use Illuminate\Support\ServiceProvider;
+use Http\Adapter\Guzzle6\Client as HttpClient;
+use Http\Message\MessageFactory\GuzzleMessageFactory as HttpGuzzleMessageFactory;
 
 class LinkedinServiceProvider extends ServiceProvider
 {
@@ -44,7 +46,11 @@ class LinkedinServiceProvider extends ServiceProvider
             $api_key = config('linkedin.api_key');
             $api_secret = config('linkedin.api_secret');
 
-            return new LinkedInLaravel($api_key, $api_secret);
+            $linkedIn = new LinkedInLaravel($api_key, $api_secret);
+            $linkedIn->setHttpClient(new HttpClient());
+            $linkedIn->setHttpMessageFactory(new HttpGuzzleMessageFactory());
+
+            return $linkedIn;
         });
     }
 }
