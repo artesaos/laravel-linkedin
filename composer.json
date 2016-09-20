@@ -12,19 +12,25 @@
     ],
     "require": {
         "php": ">=5.5.9",
-        "illuminate/contracts": "~5.1 || ~5.2",
-        "illuminate/http": "~5.1 || ~5.2",
-        "illuminate/support": "~5.1 || ~5.2",
-        "illuminate/database": "~5.1 || ~5.2",
+        "illuminate/contracts": "~5.0",
+        "illuminate/http": "~5.0",
+        "illuminate/support": "~5.0",
+        "illuminate/database": "~5.0",
         "happyr/linkedin-api-client": "0.7.*",
         "php-http/guzzle6-adapter": "^1.1"
     },
     "require-dev": {
-        "phpunit/phpunit": "~5.0"
+        "phpunit/phpunit": "~5.0",
+        "orchestra/testbench": "~3.0"
     },
     "autoload": {
         "psr-4": {
             "Artesaos\\LinkedIn\\": "src/Artesaos/LinkedIn/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Artesaos\\LinkedIn\\Tests\\": "tests"
         }
     }
 }
