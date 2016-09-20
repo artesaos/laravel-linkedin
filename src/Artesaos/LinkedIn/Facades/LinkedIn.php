@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Facade;
 class LinkedIn extends Facade {
 
     protected static function getFacadeAccessor() {
-        return 'LinkedIn';
+        return 'linkedin';
     }
 }

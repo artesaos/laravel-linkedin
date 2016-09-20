@@ -29,7 +29,7 @@ class LinkedinServiceProvider extends ServiceProvider
             ]);
 
             $this->mergeConfigFrom(
-                __DIR__ . '/config/linkedin.php','linkedin'
+                __DIR__ . '/config/linkedin.php', 'linkedin'
             );
         }
     }
@@ -41,16 +41,14 @@ class LinkedinServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //Bind the facade and pass api construct parameters
-        $this->app->bind('LinkedIn', function(){
-            $api_key = config('linkedin.api_key');
-            $api_secret = config('linkedin.api_secret');
-
-            $linkedIn = new LinkedInLaravel($api_key, $api_secret);
+        $this->app->singleton('LinkedIn', function(){
+            $linkedIn = new LinkedInLaravel(config('linkedin.api_key'), config('linkedin.api_secret'));
             $linkedIn->setHttpClient(new HttpClient());
             $linkedIn->setHttpMessageFactory(new HttpGuzzleMessageFactory());
 
             return $linkedIn;
         });
+
+        $this->app->alias('LinkedIn', 'linkedin');
     }
 }
