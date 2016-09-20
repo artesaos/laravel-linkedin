@@ -59,6 +59,13 @@ you can simple call the facade for anyone method, like this:
 ```php
 LinkedIn::foo();
 ```
+or use the laravel container:
+```php
+app('linkedin')->foo();
+app()['linkedin']->foo();
+App::make('linkedin')->foo(); // ...
+```
+
 The service container automatically return an instance of `LinkedIn` class ready to use
 
 #### LinkedIn login
