@@ -8,8 +8,7 @@
  */
 
 namespace Artesaos\LinkedIn\Tests;
-
-use LinkedIn;
+use Artesaos\LinkedIn\Facades\LinkedIn;
 
 class LinkedinTest extends AbstractTestCase
 {

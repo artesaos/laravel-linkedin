@@ -15,13 +15,15 @@
         "illuminate/contracts": "~5.0",
         "illuminate/http": "~5.0",
         "illuminate/support": "~5.0",
-        "illuminate/database": "~5.0",
-        "happyr/linkedin-api-client": "0.7.*",
-        "php-http/guzzle6-adapter": "^1.1"
+        "happyr/linkedin-api-client": "~1.0",
+        "php-http/guzzle6-adapter": "^1.1",
+        "php-http/curl-client": "^1.7",
+        "guzzlehttp/psr7": "^1.4",
+        "php-http/message": "^1.5"
     },
     "require-dev": {
         "phpunit/phpunit": "~5.0",
-        "orchestra/testbench": "~3.0"
+        "orchestra/testbench": "~3.4@dev"
     },
     "autoload": {
         "psr-4": {

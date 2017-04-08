@@ -8,6 +8,7 @@
 
 namespace Artesaos\LinkedIn;
 
+use Http\Adapter\Guzzle6\Client;
 use Illuminate\Support\ServiceProvider;
 use Http\Adapter\Guzzle6\Client as HttpClient;
 use Http\Message\MessageFactory\GuzzleMessageFactory as HttpGuzzleMessageFactory;
@@ -43,7 +44,7 @@ class LinkedinServiceProvider extends ServiceProvider
     {
         $this->app->singleton('LinkedIn', function(){
             $linkedIn = new LinkedInLaravel(config('linkedin.api_key'), config('linkedin.api_secret'));
-            $linkedIn->setHttpClient(new HttpClient());
+            $linkedIn->setHttpClient(new Client());
             $linkedIn->setHttpMessageFactory(new HttpGuzzleMessageFactory());
 
             return $linkedIn;
