@@ -34,5 +34,15 @@
         "psr-4": {
             "Artesaos\\LinkedIn\\Tests\\": "tests"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Artesaos\\LinkedIn\\LinkedinServiceProvider"
+            ],
+            "aliases": {
+                "LinkedIn": "Artesaos\\LinkedIn\\Facades\\LinkedIn"
+            }
+        }
     }
 }
